@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import { Box, Flex, Heading } from '@chakra-ui/react';
+import Characters from '../components/Characters';
 
 export default function Home(results) {
   const initialState = results;
@@ -19,17 +20,11 @@ export default function Home(results) {
         <Heading as="h1" size="2xl" mb={8}>
           Rick and Morty
         </Heading>
+        <Characters characters={characters} />
       </Box>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
+        Made by Faisal Sayed
       </footer>
     </Flex>
   )

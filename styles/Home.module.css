@@ -110,3 +110,7 @@
     flex-direction: column;
   }
 }
+
+.image {
+  border-radius: 15px;
+}

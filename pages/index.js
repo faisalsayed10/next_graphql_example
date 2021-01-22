@@ -1,4 +1,4 @@
-import { ApolloClient, fromPromise, gql, InMemoryCache } from '@apollo/client';
+import { ApolloClient, gql, InMemoryCache } from '@apollo/client';
 import { useState } from 'react'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
@@ -8,6 +8,7 @@ import Characters from '../components/Characters';
 export default function Home(results) {
   const initialState = results;
   const [characters, setCharacters] = useState(initialState.characters)
+  const [search, setSearch] = useState("");
 
   return (
     <Flex direction="column" justify="center" align="center">
